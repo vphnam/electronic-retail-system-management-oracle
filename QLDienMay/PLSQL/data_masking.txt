@@ -1,0 +1,7 @@
+BEGIN
+    dbms_redact.add_policy(object_schema => 'NAMVU', object_name => 'THETICHDIEM', policy_name => 'Mask MATHE', column_name => 'MATHE',
+    function_type => dbms_redact.partial,
+                          function_parameters => 'VVVVVVVVVV,VVVVVVVVVV,*,3,8', expression => '1=1', enable => true);
+END;
+
+SELECT * FROM NAMVU.THETICHDIEM;

@@ -1,0 +1,118 @@
+﻿@model PagedList.IPagedList<QLDienMay.Models.CHITIETDONHANG>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Chi tiết đơn hàng";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@section header{
+    CHI TIẾT ĐƠN HÀNG @ViewBag.MaDonHang
+}
+
+<div class="form-horizontal">
+    <div class="form-group" style="margin:15px;">
+        <p class="small mb-1">Nhập thông tin cần tìm</p>
+        <span class="input-group"><i class="glyphicon glyphicon-search"></i></span><input type="text" id="search" style="width:400px; height:40px;" placeholder="Search" />
+    </div>
+</div>
+
+@if (ViewBag.XuatPhieu != null)
+{
+    @Html.ActionLink("Xuất kho", "XuatKhoVaPhieuBH", "DonHang", new { id = ViewBag.MaDonHang }, new { onclick = "return confirm('Bạn có muốn xuất kho cho đơn hàng này không?')" })
+    <br />
+    <br/>
+}
+
+@Html.ActionLink("Xuất hóa đơn", "XuatHoaDon", "DonHang", new { id = ViewBag.MaDonHang }, new { onclick = "return confirm('Bạn có xuất hóa đơn cho đơn hàng này không?')" })
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card mb-4">
+            <div class="card-header">
+                <i class="fas fa-table mr-1">Bảng chi tiết đơn hàng</i>
+            </div>
+            <div class="card-body">
+                @if (Model.Count > 0)
+                {
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th style="width:80px;">
+                                        #
+                                    </th>
+                                    <th>
+                                        Mã sản phẩm
+                                    </th>
+                                    <th>
+                                        Số lượng
+                                    </th>
+                                    <th>
+                                        Đơn giá
+                                    </th>
+                                    <th>
+                                        Thành tiền
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr class="search">
+                                        <td style="width:80px;"></td>
+                                        <td>@item.MASANPHAM</td>
+                                        <td>@item.SOLUONG</td>
+                                        <td>@item.DONGIA</td>
+                                        <td>@item.THANHTIEN</td>
+                                    </tr>
+                                }
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th style="width:80px;">
+                                        #
+                                    </th>
+                                    <th>
+                                        Mã sản phẩm
+                                    </th>
+                                    <th>
+                                        Số lượng
+                                    </th>
+                                    <th>
+                                        Đơn giá
+                                    </th>
+                                    <th>
+                                        Thành tiền
+                                    </th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        @Html.PagedListPager(Model, page => Url.Action("XemChiTietDon", new { page }))
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+</div>
+<link href="~/Content/PagedList.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script>
+    $(document).ready(function () {
+        function Containts(text_one, text_two) {
+            if (text_one.indexOf(text_two) != -1)
+                return true;
+        }
+        $("#search").keyup(function () {
+            var searchText = $("#search").val().toLowerCase();
+            $(".search").each(function () {
+                if (!Containts($(this).text().toLowerCase(), searchText)) {
+                    $(this).hide();
+                }
+                else {
+                    $(this).show();
+                }
+            });
+        });
+    });
+</script>

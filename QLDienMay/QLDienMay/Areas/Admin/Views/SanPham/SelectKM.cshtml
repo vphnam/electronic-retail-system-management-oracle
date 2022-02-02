@@ -1,0 +1,6 @@
+﻿@model QLDienMay.Models.KHUYENMAI
+
+@Html.DropDownListFor(model => model.MAKHUYENMAI,
+    new SelectList(Model.ListKM.OrderBy(model => model.MAKHUYENMAI), "MAKHUYENMAI", "TenKM"),"-Chọn khuyến mãi-", new { htmlAttributes = new { @class = "form-control py-4" } })
+
+

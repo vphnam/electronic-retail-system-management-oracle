@@ -1,0 +1,7 @@
+﻿@model IEnumerable<QLDienMay.Models.LOAI>
+
+
+@foreach (var item in Model)
+{ 
+    <li>@Html.ActionLink(item.TENLOAI, "SortByLoai", "Home", new {id = item.MALOAI},null)</li>
+}

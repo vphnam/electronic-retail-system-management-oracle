@@ -1,0 +1,104 @@
+﻿@model PagedList.IPagedList<QLDienMay.Models.PHANHOI>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@section header{
+    DANH SÁCH PHẢN HỒI
+}
+
+@using (Html.BeginForm("Index", "PhanHoi"))
+{
+    <div class="form-horizontal">
+        <div class="form-group" style="margin:15px;">
+            <p class="small mb-1">Nhập mã mã phản hồi cần tìm</p>
+            <input type="search" name="id" style="width:400px; height:40px;" />
+            <input type="submit" class="btn btn-primary" value="Tìm kiếm" style="width:100px;height:45px;" />
+        </div>
+    </div>
+}
+
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card mb-4">
+            <div class="card-header">
+                <i class="fas fa-table mr-1">Bảng danh sách phản hồi</i>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>
+                                    #
+                                </th>
+                                <th>
+                                    Mã phản hồi
+                                </th>
+                                <th>
+                                    Mã khách hàng
+                                </th>
+                                <th>
+                                    Nội dung
+                                </th>
+                                <th>
+                                    Trạng thái
+                                </th>    
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @foreach (var item in Model)
+                            {
+                                <tr class="search">
+                                    <td>
+                                        @if (item.TRANGTHAI == "1")
+                                        {
+                                            @Html.ActionLink("Xử lý phản hồi", "CapNhatTrangThai", "KhachHang", new { id = item.MAKHACHHANG}, new { onclick = "return confirm('Bạn có muốn xử lý phản hồi này không?')" });
+                                        }
+                                    </td>
+                                    <td>@item.MAPHANHOI</td>
+                                    <td>@item.MAKHACHHANG</td>
+                                    <td>@item.NOIDUNG</td>
+                                    @if (item.TRANGTHAI == "0")
+                                    {
+                                        <td>Đã xử lý</td>
+                                    }
+                                    else
+                                    {
+                                        <td>Chưa xử lý</td>
+                                    }
+                                </tr>
+                            }
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>
+                                    #
+                                </th>
+                                <th>
+                                    Mã phản hồi
+                                </th>
+                                <th>
+                                    Mã khách hàng
+                                </th>
+                                <th>
+                                    Nội dung
+                                </th>
+                                <th>
+                                    Trạng thái
+                                </th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<link href="~/Content/PagedList.css" rel="stylesheet" />

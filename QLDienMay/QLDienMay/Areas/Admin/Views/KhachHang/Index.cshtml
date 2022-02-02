@@ -1,0 +1,154 @@
+﻿@model PagedList.IPagedList<QLDienMay.Models.KHACHHANG>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@section header{
+    DANH SÁCH KHÁCH HÀNG
+}
+
+@using (Html.BeginForm("Index", "KhachHang"))
+{
+    <div class="form-horizontal">
+        <div class="form-group" style="margin:15px;">
+            <p class="small mb-1">Nhập mã khách hàng cần tìm</p>
+            <input type="search" name="id" style="width:400px; height:40px;" />
+            <input type="submit" class="btn btn-primary" value="Tìm kiếm" style="width:100px;height:45px;" />
+        </div>
+    </div>
+}
+
+
+@Html.ActionLink("Thêm mới", "Create", "KhachHang", new { @class = "btn btn-primary" })
+<br />
+<br />
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card mb-4">
+            <div class="card-header">
+                <i class="fas fa-table mr-1">Bảng danh sách khách hàng</i>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>
+                                    #
+                                </th>
+                                <th>
+                                    Mã khách hàng
+                                </th>
+                                <th>
+                                    Tên khách hàng
+                                </th>
+                                <th>
+                                    Số điện thoại
+                                </th>
+                                <th>
+                                    Địa chỉ
+                                </th>
+                                <th>
+                                    Email
+                                </th>
+                                <th>
+                                    Tài khoản
+                                </th>
+                                <th>
+                                    Trạng thái
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @foreach (var item in Model)
+                            {
+                                <tr class="search">
+                                    <td>
+                                        @Html.ActionLink("Chỉnh sửa thông tin", "Edit", "KhachHang", new { id = item.MAKHACHHANG }, null)
+                                        <br />
+                                        <br />
+                                        @if (item.TRANGTHAI == "0")
+                                        {
+                                            @Html.ActionLink("Khóa tài khoản", "CapNhatTrangThai", "KhachHang", new { id = item.MAKHACHHANG, trangThai = "1" }, new { onclick = "return confirm('Bạn có muốn khóa tài khoản khách hàng này không?')" });
+                                        }
+                                        else
+                                        {
+                                            @Html.ActionLink("Mở khóa tài khoản", "CapNhatTrangThai", "KhachHang", new { id = item.MAKHACHHANG, trangThai = "0" }, new { onclick = "return confirm('Bạn có muốn mở khóa tài khoản khách hàng này không?')" });
+                                        }
+                                    </td>
+                                    <td>@item.MAKHACHHANG</td>
+                                    <td>@item.TENKHACHHANG</td>
+                                    <td>@item.SDT</td>
+                                    <td>@item.DIACHI</td>
+                                    <td>@item.EMAIL</td>
+                                    <td>@item.TAIKHOAN</td>
+                                    @if (item.TRANGTHAI == "0")
+                                    {
+                                        <td>Đang hoạt động</td>
+                                    }
+                                    else
+                                    {
+                                        <td>Ngưng hoạt động</td>
+                                    }
+                                </tr>
+                            }
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>
+                                    #
+                                </th>
+                                <th>
+                                    Mã khách hàng
+                                </th>
+                                <th>
+                                    Tên khách hàng
+                                </th>
+                                <th>
+                                    Số điện thoại
+                                </th>
+                                <th>
+                                    Địa chỉ
+                                </th>
+                                <th>
+                                    Email
+                                </th>
+                                <th>
+                                    Tài khoản
+                                </th>
+                                <th>
+                                    Trạng thái
+                                </th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<link href="~/Content/PagedList.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script>
+    $(document).ready(function () {
+        function Containts(text_one, text_two) {
+            if (text_one.indexOf(text_two) != -1)
+                return true;
+        }
+        $("#search").keyup(function () {
+            var searchText = $("#search").val().toLowerCase();
+            $(".search").each(function () {
+                if (!Containts($(this).text().toLowerCase(), searchText)) {
+                    $(this).hide();
+                }
+                else {
+                    $(this).show();
+                }
+            });
+        });
+    });
+</script>

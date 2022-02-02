@@ -1,0 +1,94 @@
+﻿@model QLDienMay.Models.KHACHHANG
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@section header{
+    THÊM MỚI KHÁCH HÀNG
+}
+@using (Html.BeginForm("Create", "KhachHang", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="card-body">
+        <div class="form-row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="small mb-1">Họ tên khách hàng</label>
+                    @Html.EditorFor(model => model.TENKHACHHANG, new { htmlAttributes = new { @class = "form-control py-4", @placeholder = "Nhập họ tên khách hàng" } })
+                    @Html.ValidationMessageFor(model => model.TENKHACHHANG, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="small mb-1">Số điện thoại</label>
+                    @Html.EditorFor(model => model.SDT, new { htmlAttributes = new { @class = "form-control py-4", @placeholder = "Nhập số điện thoại" } })
+                    @Html.ValidationMessageFor(model => model.SDT, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="small mb-1">Địa chỉ</label>
+                    @Html.EditorFor(model => model.DIACHI, new { htmlAttributes = new { @class = "form-control py-4", @placeholder = "Nhập địa chỉ" } })
+                    @Html.ValidationMessageFor(model => model.DIACHI, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="small mb-1">Thành phố</label>
+                    @Html.DropDownList("THANHPHO", new SelectList(ViewBag.ThanhPho, "MATHANHPHO", "TENTHANHPHO"), new { @style = "height:50px" })
+                    @Html.ValidationMessageFor(model => model.THANHPHO, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="small mb-1">Email</label>
+                    @Html.EditorFor(model => model.EMAIL, new { htmlAttributes = new { @class = "form-control py-4", @placeholder = "Nhập email" } })
+                    @Html.ValidationMessageFor(model => model.EMAIL, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="small mb-1">Tài khoản</label>
+                    @Html.EditorFor(model => model.TAIKHOAN, new { htmlAttributes = new { @class = "form-control py-4", @placeholder = "Nhập tài khoản" } })
+                    @Html.ValidationMessageFor(model => model.TAIKHOAN, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="small mb-1">Mật khẩu</label>
+                    @Html.PasswordFor(model => model.MATKHAU, new { htmlAttributes = new { @class = "form-control py-4", @placeholder = "Nhập mật khẩu" } })
+                    @Html.ValidationMessageFor(model => model.MATKHAU, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <div class="form-group mt-4 mb-0">
+                        <input type="submit" class="btn btn-primary btn-block" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+
+}

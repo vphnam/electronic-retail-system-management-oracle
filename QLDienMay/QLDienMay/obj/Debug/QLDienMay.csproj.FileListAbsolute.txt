@@ -1,0 +1,182 @@
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\QLDienMay.dll.config
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\QLDienMay.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\QLDienMay.pdb
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\roslyn\csc.exe
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\roslyn\csc.exe.config
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\roslyn\csc.rsp
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\roslyn\csi.exe
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\roslyn\csi.exe.config
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\roslyn\csi.rsp
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\roslyn\System.AppContext.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\roslyn\System.Console.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\roslyn\System.IO.Compression.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\roslyn\System.IO.Pipes.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\roslyn\System.Security.Claims.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\roslyn\System.ValueTuple.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\roslyn\System.Xml.XPath.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\roslyn\vbc.exe
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\roslyn\vbc.exe.config
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\roslyn\vbc.rsp
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\roslyn\VBCSCompiler.exe
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\Antlr3.Runtime.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\EntityFramework.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\EntityFramework.SqlServer.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\Newtonsoft.Json.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\Oracle.ManagedDataAccess.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\Oracle.ManagedDataAccess.EntityFramework.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\System.Web.Helpers.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\System.Web.Mvc.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\System.Web.Optimization.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\System.Web.Razor.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\System.Web.WebPages.Deployment.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\System.Web.WebPages.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\System.Web.WebPages.Razor.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\WebGrease.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\EntityFramework.xml
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\EntityFramework.SqlServer.xml
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\System.Web.Helpers.xml
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\System.Web.Mvc.xml
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\System.Web.Optimization.xml
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\System.Web.Razor.xml
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\System.Web.WebPages.xml
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\System.Web.WebPages.Deployment.xml
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\System.Web.WebPages.Razor.xml
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\Newtonsoft.Json.xml
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\Antlr3.Runtime.pdb
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\obj\Debug\QLDienMay.csprojAssemblyReference.cache
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\obj\Debug\QLDienMay.csproj.CoreCompileInputs.cache
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\obj\Debug\QLDienMay.csproj.CopyComplete
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\obj\Debug\QLDienMay.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\obj\Debug\QLDienMay.pdb
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\PagedList.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\PagedList.Mvc.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\PagedList.xml
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\PagedList.Mvc.xml
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\EPPlus.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\System.ComponentModel.Annotations.dll
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\EPPlus.xml
+C:\Users\NAMVU\OneDrive\Máy tính\QLDienMay\QLDienMay\bin\Microsoft.IO.RecyclableMemoryStream.xml
+D:\Projects\QLDienMay\QLDienMay\bin\QLDienMay.dll.config
+D:\Projects\QLDienMay\QLDienMay\bin\QLDienMay.dll
+D:\Projects\QLDienMay\QLDienMay\bin\QLDienMay.pdb
+D:\Projects\QLDienMay\QLDienMay\bin\roslyn\csc.exe
+D:\Projects\QLDienMay\QLDienMay\bin\roslyn\csc.exe.config
+D:\Projects\QLDienMay\QLDienMay\bin\roslyn\csc.rsp
+D:\Projects\QLDienMay\QLDienMay\bin\roslyn\csi.exe
+D:\Projects\QLDienMay\QLDienMay\bin\roslyn\csi.exe.config
+D:\Projects\QLDienMay\QLDienMay\bin\roslyn\csi.rsp
+D:\Projects\QLDienMay\QLDienMay\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Projects\QLDienMay\QLDienMay\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Projects\QLDienMay\QLDienMay\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Projects\QLDienMay\QLDienMay\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Projects\QLDienMay\QLDienMay\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Projects\QLDienMay\QLDienMay\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Projects\QLDienMay\QLDienMay\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Projects\QLDienMay\QLDienMay\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Projects\QLDienMay\QLDienMay\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Projects\QLDienMay\QLDienMay\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Projects\QLDienMay\QLDienMay\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Projects\QLDienMay\QLDienMay\bin\roslyn\System.AppContext.dll
+D:\Projects\QLDienMay\QLDienMay\bin\roslyn\System.Collections.Immutable.dll
+D:\Projects\QLDienMay\QLDienMay\bin\roslyn\System.Console.dll
+D:\Projects\QLDienMay\QLDienMay\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Projects\QLDienMay\QLDienMay\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Projects\QLDienMay\QLDienMay\bin\roslyn\System.IO.Compression.dll
+D:\Projects\QLDienMay\QLDienMay\bin\roslyn\System.IO.FileSystem.dll
+D:\Projects\QLDienMay\QLDienMay\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Projects\QLDienMay\QLDienMay\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\Projects\QLDienMay\QLDienMay\bin\roslyn\System.IO.Pipes.dll
+D:\Projects\QLDienMay\QLDienMay\bin\roslyn\System.Reflection.Metadata.dll
+D:\Projects\QLDienMay\QLDienMay\bin\roslyn\System.Security.AccessControl.dll
+D:\Projects\QLDienMay\QLDienMay\bin\roslyn\System.Security.Claims.dll
+D:\Projects\QLDienMay\QLDienMay\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Projects\QLDienMay\QLDienMay\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Projects\QLDienMay\QLDienMay\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Projects\QLDienMay\QLDienMay\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Projects\QLDienMay\QLDienMay\bin\roslyn\System.Security.Principal.Windows.dll
+D:\Projects\QLDienMay\QLDienMay\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Projects\QLDienMay\QLDienMay\bin\roslyn\System.ValueTuple.dll
+D:\Projects\QLDienMay\QLDienMay\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Projects\QLDienMay\QLDienMay\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Projects\QLDienMay\QLDienMay\bin\roslyn\System.Xml.XPath.dll
+D:\Projects\QLDienMay\QLDienMay\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Projects\QLDienMay\QLDienMay\bin\roslyn\vbc.exe
+D:\Projects\QLDienMay\QLDienMay\bin\roslyn\vbc.exe.config
+D:\Projects\QLDienMay\QLDienMay\bin\roslyn\vbc.rsp
+D:\Projects\QLDienMay\QLDienMay\bin\roslyn\VBCSCompiler.exe
+D:\Projects\QLDienMay\QLDienMay\bin\roslyn\VBCSCompiler.exe.config
+D:\Projects\QLDienMay\QLDienMay\bin\Antlr3.Runtime.dll
+D:\Projects\QLDienMay\QLDienMay\bin\EntityFramework.dll
+D:\Projects\QLDienMay\QLDienMay\bin\EntityFramework.SqlServer.dll
+D:\Projects\QLDienMay\QLDienMay\bin\EPPlus.dll
+D:\Projects\QLDienMay\QLDienMay\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Projects\QLDienMay\QLDienMay\bin\Microsoft.IO.RecyclableMemoryStream.dll
+D:\Projects\QLDienMay\QLDienMay\bin\Microsoft.Web.Infrastructure.dll
+D:\Projects\QLDienMay\QLDienMay\bin\Newtonsoft.Json.dll
+D:\Projects\QLDienMay\QLDienMay\bin\Oracle.ManagedDataAccess.dll
+D:\Projects\QLDienMay\QLDienMay\bin\Oracle.ManagedDataAccess.EntityFramework.dll
+D:\Projects\QLDienMay\QLDienMay\bin\PagedList.dll
+D:\Projects\QLDienMay\QLDienMay\bin\PagedList.Mvc.dll
+D:\Projects\QLDienMay\QLDienMay\bin\System.ComponentModel.Annotations.dll
+D:\Projects\QLDienMay\QLDienMay\bin\System.Web.Helpers.dll
+D:\Projects\QLDienMay\QLDienMay\bin\System.Web.Mvc.dll
+D:\Projects\QLDienMay\QLDienMay\bin\System.Web.Optimization.dll
+D:\Projects\QLDienMay\QLDienMay\bin\System.Web.Razor.dll
+D:\Projects\QLDienMay\QLDienMay\bin\System.Web.WebPages.Deployment.dll
+D:\Projects\QLDienMay\QLDienMay\bin\System.Web.WebPages.dll
+D:\Projects\QLDienMay\QLDienMay\bin\System.Web.WebPages.Razor.dll
+D:\Projects\QLDienMay\QLDienMay\bin\WebGrease.dll
+D:\Projects\QLDienMay\QLDienMay\bin\EntityFramework.xml
+D:\Projects\QLDienMay\QLDienMay\bin\EntityFramework.SqlServer.xml
+D:\Projects\QLDienMay\QLDienMay\bin\EPPlus.xml
+D:\Projects\QLDienMay\QLDienMay\bin\Microsoft.IO.RecyclableMemoryStream.xml
+D:\Projects\QLDienMay\QLDienMay\bin\PagedList.xml
+D:\Projects\QLDienMay\QLDienMay\bin\PagedList.Mvc.xml
+D:\Projects\QLDienMay\QLDienMay\bin\System.Web.Helpers.xml
+D:\Projects\QLDienMay\QLDienMay\bin\System.Web.Mvc.xml
+D:\Projects\QLDienMay\QLDienMay\bin\System.Web.Optimization.xml
+D:\Projects\QLDienMay\QLDienMay\bin\System.Web.Razor.xml
+D:\Projects\QLDienMay\QLDienMay\bin\System.Web.WebPages.xml
+D:\Projects\QLDienMay\QLDienMay\bin\System.Web.WebPages.Deployment.xml
+D:\Projects\QLDienMay\QLDienMay\bin\System.Web.WebPages.Razor.xml
+D:\Projects\QLDienMay\QLDienMay\bin\Newtonsoft.Json.xml
+D:\Projects\QLDienMay\QLDienMay\bin\Antlr3.Runtime.pdb
+D:\Projects\QLDienMay\QLDienMay\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Projects\QLDienMay\QLDienMay\obj\Debug\QLDienMay.csprojAssemblyReference.cache
+D:\Projects\QLDienMay\QLDienMay\obj\Debug\QLDienMay.csproj.CoreCompileInputs.cache
+D:\Projects\QLDienMay\QLDienMay\obj\Debug\QLDienMay.csproj.CopyComplete
+D:\Projects\QLDienMay\QLDienMay\obj\Debug\QLDienMay.dll
+D:\Projects\QLDienMay\QLDienMay\obj\Debug\QLDienMay.pdb

@@ -1,0 +1,90 @@
+﻿@model QLDienMay.Areas.Admin.Models.SanPhamEntity
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@section header{
+    CẬP NHẬT SẢN PHẨM
+}
+<script src="~/Areas/Assets/js/scripts2.js"></script>
+
+@using (Html.BeginForm("Edit", "SanPham", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="card-body">
+        <div class="form-row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="small mb-1">Tên sản phẩm</label>
+                    @Html.EditorFor(model => model.TENSANPHAM, new { htmlAttributes = new { @class = "form-control py-4", @placeholder = "Nhập tên sản phẩm" } })
+                    @Html.ValidationMessageFor(model => model.TENSANPHAM, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="small mb-1">Thêm ảnh minh họa</label>
+                    <img src="@Url.Content(Model.ANHMINHHOA)" height="150" width="150" id="previewImg" />
+                    @Html.ValidationMessageFor(model => model.ANHMINHHOA, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <input type="file" name="UploadImage" onchange="ChangeImage(this,document.getElementById('previewImg'))" />
+                    @Html.ValidationMessageFor(model => model.UploadImage, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="small mb-1">Đơn giá</label>
+                    @Html.EditorFor(model => model.DONGIA, new { htmlAttributes = new { @class = "form-control py-4", @placeholder = "Nhập đơn giá" } })
+                    @Html.ValidationMessageFor(model => model.DONGIA, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="small mb-1">Khuyến mãi</label>
+                    @{
+                        Html.RenderAction("SelectKM", "SanPham");
+                    }
+                    @Html.ValidationMessageFor(model => model.MAKHUYENMAI, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label class="small mb-1">Trạng thái</label>
+                <label style="font-weight:bolder;"><input type="radio" class="custom-radio" name="TRANGTHAI" value="0" id="rdoCash" checked="checked" />Hoạt động</label>
+                <label style="font-weight:bolder;"><input type="radio" class="custom-radio" name="TRANGTHAI" value="1" id="rdoCash" />Ngưng hoạt động</label>
+                @Html.ValidationMessageFor(model => model.TRANGTHAI, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+        <div class="form-row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <div class="form-group mt-4 mb-0">
+                        <input type="submit" class="btn btn-primary btn-block" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+
+}
+

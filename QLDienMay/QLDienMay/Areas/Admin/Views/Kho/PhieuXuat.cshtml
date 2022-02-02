@@ -1,0 +1,153 @@
+﻿@model PagedList.IPagedList<QLDienMay.Models.PHIEUXUAT>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@section header{
+    DANH SÁCH PHIẾU XUẤT
+}
+
+@using (Html.BeginForm("PhieuXuat", "Kho"))
+{
+    <div class="form-horizontal">
+        <div class="form-group" style="margin:15px;">
+            <p class="small mb-1">Nhập mã phiếu xuất cần tìm</p>
+            <input type="search" name="id" style="width:400px; height:40px;" />
+            <input type="submit" class="btn btn-primary" value="Tìm kiếm" style="width:100px;height:45px;" />
+        </div>
+    </div>
+}
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card mb-4">
+            <div class="card-header">
+                <i class="fas fa-table mr-1">Bảng danh sách phiếu xuất</i>
+            </div>
+            <div class="card-body">
+                @if (Model.Count > 0)
+                {
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th style="width:80px;">
+                                        #
+                                    </th>
+                                    <th>
+                                        Mã phiếu xuất
+                                    </th>
+                                    <th>
+                                        Mã nhân viên tạo phiếu
+                                    </th>
+                                    <th>
+                                        Mã trưởng kho
+                                    </th>
+                                    <th>
+                                        Mã kho
+                                    </th>
+                                    <th>
+                                        Mã đơn hàng
+                                    </th>
+                                    <th>
+                                        Thời gian tạo
+                                    </th>
+                                    <th>
+                                        Tổng giá trị
+                                    </th>
+                                    <th>
+                                        Trạng thái
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr class="search">
+                                        <td>
+                                            @Html.ActionLink("Xem chi tiết", "ChiTietPhieuXuat", "Kho", new { id = item.MAPHIEUXUAT }, null)
+                                        </td>
+                                        <td>@item.MAPHIEUXUAT</td>
+                                        <td>@item.NHANVIENTAOPHIEU</td>
+                                        <td>@item.NHANVIENTRUONGKHO</td>
+                                        <td>@item.MAKHO</td>
+                                        <td>@item.MADONHANG</td>
+                                        <td>@item.THOIGIANTAO.ToString("dd/MM/yyyy hh:mm tt")</td>
+                                        <td>@Html.FormatValue(item.TONGGIATRI, "{0:#,###}") VNĐ</td>
+                                        @{
+                                            if (item.TRANGTHAI == "0")
+                                            {
+                                                <td>Có hiệu lực</td>
+                                            }
+                                            else
+                                            {
+                                                <td>Không có hiệu lực</td>
+                                            }
+                                        }
+
+                                    </tr>
+                                }
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>
+                                        #
+                                    </th>
+                                    <th>
+                                        Mã phiếu xuất
+                                    </th>
+                                    <th>
+                                        Mã nhân viên tạo phiếu
+                                    </th>
+                                    <th>
+                                        Mã trưởng kho
+                                    <th>
+                                        Mã kho
+                                    </th>
+                                    <th>
+                                        Mã đơn hàng
+                                    </th>
+                                    <th>
+                                        Thời gian tạo
+                                    </th>
+                                    <th>
+                                        Tổng giá trị
+                                    </th>
+                                    <th>
+                                        Trạng thái
+                                    </th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+</div>
+<link href="~/Content/PagedList.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script>
+    $(document).ready(function () {
+        function Containts(text_one, text_two) {
+            if (text_one.indexOf(text_two) != -1)
+                return true;
+        }
+        $("#search").keyup(function () {
+            var searchText = $("#search").val().toLowerCase();
+            $(".search").each(function () {
+                if (!Containts($(this).text().toLowerCase(), searchText)) {
+                    $(this).hide();
+                }
+                else {
+                    $(this).show();
+                }
+            });
+        });
+    });
+</script>

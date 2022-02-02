@@ -1,0 +1,211 @@
+﻿@model PagedList.IPagedList<QLDienMay.Models.DONHANG>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@section header{
+    DANH SÁCH ĐƠN HÀNG
+}
+
+@using (Html.BeginForm("Index", "DonHang"))
+{
+    <div class="form-horizontal">
+        <div class="form-group" style="margin:15px;">
+            <p class="small mb-1">Nhập mã đơn hàng cần tìm</p>
+            <input type="search" name="id" style="width:400px; height:40px;" />
+            <input type="submit" class="btn btn-primary" value="Tìm kiếm" style="width:100px;height:45px;" />
+        </div>
+    </div>
+}
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card mb-4">
+            <div class="card-header">
+                <i class="fas fa-table mr-1">Bảng danh sách đơn hàng</i>
+            </div>
+            <div class="card-body">
+                @if (Model.Count > 0)
+                {
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th style="width:80px;">
+                                        #
+                                    </th>
+                                    <th>
+                                        Mã đơn hàng
+                                    </th>
+                                    <th>
+                                        Nhân viên phụ trách
+                                    </th>
+                                    <th>
+                                        Mã khách hàng
+                                    </th>
+                                    <th>
+                                        Mã cửa hàng
+                                    </th>
+                                    <th>
+                                        Thời gian tạo
+                                    </th>
+                                    <th>
+                                        Mã voucher
+                                    </th>
+                                    <th>
+                                        Loại đơn
+                                    </th>
+                                    <th>
+                                        Tình trạng xác nhận
+                                    </th>
+                                    <th>
+                                        Tình trạng thanh toán
+                                    </th>
+                                    <th>
+                                        Tình trạng giao hàng
+                                    </th>
+                                    <th>
+                                        Tổng giá trị
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr class="search">
+                                        <td style="width:80px;">
+                                            @{
+                                                @Html.ActionLink("Xem chi tiết đơn hàng", "XemChiTietDon", "DonHang", new { id = item.MADONHANG }, null)
+                                                <br />
+                                                <br />
+                                                if (item.TINHTRANGXACNHAN == null)
+                                                {
+                                                    @Html.ActionLink("Xác nhận thành công", "XacNhan", "DonHang", new { id = item.MADONHANG, confirm = "0" }, new { onclick = "return confirm('Bạn có muốn cập nhật tình trạng xác nhận đơn hàng này là thành công không?')" })
+                                                    <br />
+                                                    <br />
+                                                    @Html.ActionLink("Xác nhận thất bại", "XacNhan", "DonHang", new { id = item.MADONHANG, confirm = "1" }, new { onclick = "return confirm('Bạn có muốn cập nhật tình trạng xác nhận đơn hàng này là thất bại không?')" })
+                                                }
+                                                if (item.TINHTRANGXACNHAN == "0" && item.TINHTRANGTHANHTOAN == null)
+                                                {
+                                                    @Html.ActionLink("Thanh toán thành công", "ThanhToan", "DonHang", new { id = item.MADONHANG, confirm = "0" }, new { onclick = "return confirm('Bạn có muốn cập nhật tình trạng thanh toán đơn hàng này là thành công không?')" })
+                                                    <br />
+                                                    <br />
+                                                    @Html.ActionLink("Thanh toán thất bại", "ThanhToan", "DonHang", new { id = item.MADONHANG, confirm = "1" }, new { onclick = "return confirm('Bạn có muốn cập nhật tình trạng thanh toán đơn hàng này là thất bại không?')" })
+                                                }
+                                                if (item.TINHTRANGTHANHTOAN == "0" && item.TINHTRANGGIAOHANG == null)
+                                                {
+                                                    @Html.ActionLink("Giao hàng thành công", "GiaoHang", "DonHang", new { id = item.MADONHANG, confirm = "0" }, new { onclick = "return confirm('Bạn có muốn cập nhật tình trạng giao hàng đơn hàng này là thành công không?')" })
+                                                    <br />
+                                                    <br />
+                                                    @Html.ActionLink("Giao hàng thất bại", "GiaoHang", "DonHang", new { id = item.MADONHANG, confirm = "1" }, new { onclick = "return confirm('Bạn có muốn cập nhật tình trạng giao hàng đơn hàng này là thất bại không?')" })
+                                                }
+                                            }
+                                        </td>
+                                        <td>@item.MADONHANG</td>
+                                        <td>@item.NHANVIENPHUTRACH</td>
+                                        <td>@item.MAKHACHHANG</td>
+                                        <td>@item.MACUAHANG</td>
+                                        <td>@item.THOIGIANTAO.ToString("dd/MM/yyyy hh:mm tt")</td>
+                                        <td>@item.MAVOUCHER</td>
+                                        @if (item.LOAI == "0")
+                                        {
+                                            <td>Online</td>
+                                        }
+                                        else
+                                        {
+                                            <td>Offline</td>
+                                        }
+                                        @if (item.TINHTRANGXACNHAN == "0")
+                                        {
+                                            <td>Thành công</td>
+                                        }
+                                        else if (item.TINHTRANGXACNHAN == null)
+                                        {
+                                            <td>Chưa xác nhận</td>
+                                        }
+                                        else
+                                        {
+                                            <td>Không thành công</td>
+                                        }
+                                        @if (item.TINHTRANGTHANHTOAN == "0")
+                                        {
+                                            <td>Thành công</td>
+                                        }
+                                        else if (item.TINHTRANGTHANHTOAN == null)
+                                        {
+                                            <td>Chưa thanh toán</td>
+                                        }
+                                        else
+                                        {
+                                            <td>Không thành công</td>
+                                        }
+                                        @if (item.TINHTRANGGIAOHANG == "0")
+                                        {
+                                            <td>Thành công</td>
+                                        }
+                                        else if (item.TINHTRANGGIAOHANG == null)
+                                        {
+                                            <td>Chưa giao hàng</td>
+                                        }
+                                        else
+                                        {
+                                            <td>Không thành công</td>
+                                        }
+                                        <td>@Html.FormatValue(item.TONGGIATRI, "{0:#,###}") VNĐ</td>
+
+                                    </tr>
+                                }
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th style="width:80px;">
+                                        #
+                                    </th>
+                                    <th>
+                                        Mã đơn hàng
+                                    </th>
+                                    <th>
+                                        Nhân viên phụ trách
+                                    </th>
+                                    <th>
+                                        Mã khách hàng
+                                    </th>
+                                    <th>
+                                        Mã cửa hàng
+                                    </th>
+                                    <th>
+                                        Thời gian tạo
+                                    </th>
+                                    <th>
+                                        Mã voucher
+                                    </th>
+                                    <th>
+                                        Loại đơn
+                                    </th>
+                                    <th>
+                                        Tình trạng xác nhận
+                                    </th>
+                                    <th>
+                                        Tình trạng thanh toán
+                                    </th>
+                                    <th>
+                                        Tình trạng giao hàng
+                                    </th>
+                                    <th>
+                                        Tổng giá trị
+                                    </th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+</div>
+<link href="~/Content/PagedList.css" rel="stylesheet" />

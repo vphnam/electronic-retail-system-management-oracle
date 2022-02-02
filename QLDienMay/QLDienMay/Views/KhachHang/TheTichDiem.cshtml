@@ -1,0 +1,79 @@
+﻿@model QLDienMay.Models.THETICHDIEM
+@{
+    ViewBag.Title = "TheKhachHang";
+    Layout = "~/Views/Shared/_LayoutKhachHang.cshtml";
+}
+
+<div class="login100-form validate-form" style="height:400px; width:400px;">
+    <span class="login100-form-title">
+        <h1 style="font-weight: bold">Thông tin thẻ</h1>
+    </span>
+    @if (Model != null)
+    {
+        <dl class="dl-horizontal">
+            <dt style="font:bold">
+                @Html.DisplayNameFor(model => model.MATHE)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MATHE)
+            </dd>
+
+            <dt style="font:bold">
+                @Html.DisplayNameFor(model => model.NGAYTAO)
+            </dt>
+
+            <dd>
+                @Model.NGAYTAO.ToString("dd/MM/yyyy hh:mm tt")
+            </dd>
+
+            <dt style="font:bold">
+                Tên khách hàng
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.KHACHHANG.TENKHACHHANG)
+            </dd>
+
+            <dt style="font:bold">
+                @Html.DisplayNameFor(model => model.HANG)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.HANGTICHDIEM.TENHANG)
+            </dd>
+
+            <dt style="font:bold">
+                @Html.DisplayNameFor(model => model.DIEM)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DIEM)
+            </dd>
+
+        </dl>
+    }
+    else
+    {
+        <div class="text-center p-t-12">
+            <h3 style="font:bold;font-size:15px;">Bạn vẫn chưa đăng ký thẻ thành viên, @Html.ActionLink("Đăng ký ngay!", "TaoThe", "KhachHang", null, new { @style = "font-size:20px;font:bold;" })</h3>
+        </div>
+    }
+
+
+
+</div>
+<div class="text-center p-t-12" style="margin:0 0 50px 250px;">
+    <p>@Html.ActionLink("Mua hàng ngay", "Index", "Home", null, new { @style = "font-size:50px;font:bold;text-align:center;" }) </p>
+</div>
+
+@if (ViewBag.Message != null)
+{
+    <script type="text/javascript">
+
+        window.onload = function () {
+            alert("@ViewBag.Message");
+            };
+    </script>
+}
+
